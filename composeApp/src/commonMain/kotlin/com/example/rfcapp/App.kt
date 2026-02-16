@@ -14,14 +14,6 @@ import androidx.compose.ui.Alignment
     var apellidoMaterno by remember { mutableStateOf("") }
     var fecha by remember { mutableStateOf("") }
 
-    /*var rfc by remember { mutableStateOf("") }
-
-
-    //Permite reaccionar a cambios de estado
-    //y ejecutar lógica automáticamente sin interacción del usuario.
-    LaunchedEffect(nombre, apellidoPaterno, apellidoMaterno, fecha) {
-        rfc = calcularRFC(nombre, apellidoPaterno, apellidoMaterno, fecha)
-    }*/
     val rfc = calcularRFC(nombre, apellidoPaterno, apellidoMaterno, fecha)
     val rfcConstruccion = rfcEnConstruccion(nombre, apellidoPaterno, apellidoMaterno, fecha)
 
